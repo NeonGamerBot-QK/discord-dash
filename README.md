@@ -1,103 +1,216 @@
-# TSDX User Guide
+<div id="top"></div>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
 
-> This TSDX setup is meant for developing libraries (not apps!) that can be published to NPM. If you’re looking to build a Node app, you could use `ts-node-dev`, plain `ts-node`, or simple `tsc`.
 
-> If you’re new to TypeScript, checkout [this handy cheatsheet](https://devhints.io/typescript)
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-## Commands
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-TSDX scaffolds your new library inside `/src`.
 
-To run TSDX, use:
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/NeonGamerBot-QK/discord-dash">
+    <img src="images/icon.png" alt="Logo" width="80" height="80">
+  </a>
 
-```bash
-npm start # or yarn start
-```
+<h3 align="center">discord-dash</h3>
 
-This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
+  <p align="center">
+    A discord dashboard package
+    <br />
+    <a href="https://github.com/NeonGamerBot-QK/discord-dash"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/NeonGamerBot-QK/discord-dash">View Demo</a>
+    ·
+    <a href="https://github.com/NeonGamerBot-QK/discord-dash/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/NeonGamerBot-QK/discord-dash/issues">Request Feature</a>
+  </p>
+</div>
 
-To do a one-off build, use `npm run build` or `yarn build`.
 
-To run tests, use `npm test` or `yarn test`.
 
-## Configuration
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-Code quality is set up for you with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
 
-### Jest
 
-Jest tests are set up to run with `npm test` or `yarn test`.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-### Bundle Analysis
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-[`size-limit`](https://github.com/ai/size-limit) is set up to calculate the real cost of your library with `npm run size` and visualize the bundle with `npm run analyze`.
+<!--Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `NeonGamerBot-QK`, `discord-dash`, <!--`twitter_handle`, `linkedin_username`, `saahilattud`, `gmail`, `discord-dash`, `A discord dashboard package`
+-->
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-#### Setup Files
 
-This is the folder structure we set up for you:
 
-```txt
-/src
-  index.tsx       # EDIT THIS
-/test
-  blah.test.tsx   # EDIT THIS
-.gitignore
-package.json
-README.md         # EDIT THIS
-tsconfig.json
-```
+### Built With
 
-### Rollup
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
 
-TSDX uses [Rollup](https://rollupjs.org) as a bundler and generates multiple rollup configs for various module formats and build settings. See [Optimizations](#optimizations) for details.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### TypeScript
 
-`tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
 
-## Continuous Integration
+<!-- GETTING STARTED -->
+## Getting Started
 
-### GitHub Actions
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-Two actions are added by default:
+### Installation
 
-- `main` which installs deps w/ cache, lints, tests, and builds on all pushes against a Node and OS matrix
-- `size` which comments cost comparison of your library on every pull request using [`size-limit`](https://github.com/ai/size-limit)
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/NeonGamerBot-QK/discord-dash.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. use this with your main file `index.js`
+   ```js
+   const { Dashboard } = require('../discord-dash/dist')
+   ```
 
-## Optimizations
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
 
-```js
-// ./types/index.d.ts
-declare var __DEV__: boolean;
 
-// inside your code...
-if (__DEV__) {
-  console.log('foo');
-}
-```
+<!-- USAGE EXAMPLES -->
+## Usage
 
-You can also choose to install and use [invariant](https://github.com/palmerhq/tsdx#invariant) and [warning](https://github.com/palmerhq/tsdx#warning) functions.
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-## Module Formats
+_For more examples, please refer to the [Documentation](https://example.com)_
 
-CJS, ESModules, and UMD module formats are supported.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
 
-## Named Exports
 
-Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
+<!-- ROADMAP -->
+## Roadmap
 
-## Including Styles
+- [] Cool
+- [] Feature 2
+- [] Feature 3
+    - [] Nested Feature
 
-There are many ways to ship styles, including with CSS-in-JS. TSDX has no opinion on this, configure how you like.
+See the [open issues](https://github.com/NeonGamerBot-QK/discord-dash/issues) for a full list of proposed features (and known issues).
 
-For vanilla CSS, you can include it at the root directory and add it to the `files` section in your `package.json`, so that it can be imported separately by your users and run through their bundler's loader.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Publishing to NPM
 
-We recommend using [np](https://github.com/sindresorhus/np).
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Saahil - saahilattud@gmail.com
+
+Project Link: [https://github.com/NeonGamerBot-QK/discord-dash](https://github.com/NeonGamerBot-QK/discord-dash)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* []()
+* []()
+* []()
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/NeonGamerBot-QK/discord-dash.svg?style=for-the-badge
+[contributors-url]: https://github.com/NeonGamerBot-QK/discord-dash/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/NeonGamerBot-QK/discord-dash.svg?style=for-the-badge
+[forks-url]: https://github.com/NeonGamerBot-QK/discord-dash/network/members
+[stars-shield]: https://img.shields.io/github/stars/NeonGamerBot-QK/discord-dash.svg?style=for-the-badge
+[stars-url]: https://github.com/NeonGamerBot-QK/discord-dash/stargazers
+[issues-shield]: https://img.shields.io/github/issues/NeonGamerBot-QK/discord-dash.svg?style=for-the-badge
+[issues-url]: https://github.com/NeonGamerBot-QK/discord-dash/issues
+[license-shield]: https://img.shields.io/github/license/NeonGamerBot-QK/discord-dash.svg?style=for-the-badge
+[license-url]: https://github.com/NeonGamerBot-QK/discord-dash/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/linkedin_username
+[product-screenshot]: images/screenshot.png
